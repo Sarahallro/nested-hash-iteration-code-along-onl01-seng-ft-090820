@@ -15,5 +15,11 @@ require 'pry'
   # }
   
 def remove_strawberry(contacts)
-
+  contacts.each do |human, info|
+    info.each do |info_type, result|
+      if result == "strawberry"
+        delete(result)
+      end
+    end
+  end
 end
